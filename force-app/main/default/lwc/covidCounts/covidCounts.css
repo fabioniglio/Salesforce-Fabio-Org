@@ -1,0 +1,36 @@
+.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+  }
+  .header-column {
+    padding: 0 2rem;
+  }
+  .field-title {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+    color: white;
+  }
+  .field-value {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+    color: white;
+  }
+  .total-cases {
+    background-color: rgb(21, 137, 238);
+    border: thin;
+  }
+  .total-deaths {
+    background-color: #d20101;
+    border: thin;
+  }
+  .total-recovered {
+    background-color: #05a705;
+    border: thin;
+  }
+  .c-layout {
+    padding-top: 1%;
+  }

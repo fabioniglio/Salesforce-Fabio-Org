@@ -1,0 +1,72 @@
+<template>
+  <template if:true={countryName}>
+    <div class="slds-text-heading_medium slds-text-align_center">
+      Data for {countryName}
+      <lightning-avatar
+        src={countryCovidInfo.countryInfo.flag}
+        class="c-avatar"
+      ></lightning-avatar>
+    </div>
+
+    <table class="c-table">
+      <tr>
+        <th>Total Cases</th>
+        <th>Today's Cases</th>
+        <th>Total Deaths</th>
+        <th>Today's Deaths</th>
+        <th>Recovered</th>
+        <th>Active</th>
+        <th>Critical</th>
+        <th>Cases Per One Million</th>
+        <th>Deaths Per One Million</th>
+      </tr>
+      <tr>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.cases}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.todayCases}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.deaths}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.todayDeaths}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.recovered}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.active}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.critical}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.casesPerOneMillion}
+          ></lightning-formatted-number>
+        </td>
+        <td>
+          <lightning-formatted-number
+            value={countryCovidInfo.deathsPerOneMillion}
+          ></lightning-formatted-number>
+        </td>
+      </tr>
+    </table>
+  </template>
+</template>

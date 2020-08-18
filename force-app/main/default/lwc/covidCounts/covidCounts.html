@@ -1,0 +1,82 @@
+<template>
+  <div class="c-container">
+    <lightning-layout class="c-layout">
+      <lightning-layout-item
+        padding="around-small"
+        class="total-cases slds-text-align_center"
+        flexibility="auto"
+      >
+        <div class="header-column">
+          <p class="field-title" title="Total Cases">Total Cases</p>
+          <p class="field-value">
+            <lightning-formatted-number
+              value={covidCounts.cases}
+            ></lightning-formatted-number>
+          </p>
+        </div>
+      </lightning-layout-item>
+
+      <lightning-layout-item
+        padding="around-small"
+        class="total-deaths slds-text-align_center"
+        flexibility="auto"
+      >
+        <div class="header-column">
+          <p class="field-title" title="Total Deaths">Total Deaths</p>
+          <p class="field-value">
+            <lightning-formatted-number
+              value={covidCounts.deaths}
+            ></lightning-formatted-number>
+          </p>
+        </div>
+      </lightning-layout-item>
+
+      <lightning-layout-item
+        padding="around-small"
+        class="total-recovered slds-text-align_center"
+        flexibility="auto"
+      >
+        <div class="header-column">
+          <p class="field-title" title="Total Cases">Total Recovered</p>
+          <p class="field-value">
+            <lightning-formatted-number
+              value={covidCounts.recovered}
+            ></lightning-formatted-number>
+          </p>
+        </div>
+      </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout class="c-layout">
+      <lightning-layout-item
+        padding="around-small"
+        class="total-cases slds-text-align_center"
+        flexibility="auto"
+      >
+        <div class="header-column">
+          <p class="field-title" title="Total Cases">Today's Cases</p>
+          <p class="field-value">
+            <lightning-formatted-number
+              value={covidCounts.todaysCases}
+            ></lightning-formatted-number>
+          </p>
+        </div>
+      </lightning-layout-item>
+
+      <lightning-layout-item
+        padding="around-small"
+        class="total-deaths slds-text-align_center"
+        flexibility="auto"
+      >
+        <div class="header-column">
+          <p class="field-title" title="Total Deaths">Today's Deaths</p>
+          <p class="field-value">
+            <lightning-formatted-number
+              value={covidCounts.todaysDeaths}
+            ></lightning-formatted-number>
+          </p>
+        </div>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
+</template>

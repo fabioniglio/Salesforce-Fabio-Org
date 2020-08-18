@@ -1,0 +1,27 @@
+.c-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.c-table td,
+.c-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.c-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.c-table tr:hover {
+  background-color: #ddd;
+}
+.c-table th {
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+.c-avatar {
+  margin-right: 5%;
+}
+.c-button-icon {
+    margin-left: 1%;
+}

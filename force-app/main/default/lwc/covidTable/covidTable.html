@@ -1,0 +1,55 @@
+<template>
+  <template if:true={covidInfo}>
+    <!-- Filter for table content-->
+    <lightning-input
+      type="text"
+      placeholder="Filter by country name"
+      onchange={handleChange}
+    ></lightning-input>
+    <table class="c-table">
+      <tr>
+        <th>
+          Country
+        </th>
+        <th>Total Cases</th>
+        <th>Total Deaths</th>
+        <th>Total Recovered</th>
+      </tr>
+      <template for:each={covidInfo} for:item="info">
+        <tr key={info.country}>
+          <td>
+            <lightning-avatar
+              src={info.countryInfo.flag}
+              class="c-avatar"
+            ></lightning-avatar>
+            {info.country}
+            <lightning-button-icon
+              icon-name="utility:info"
+              variant="bare"
+              alternative-text="More Info"
+              title="More Info"
+              class="c-button-icon"
+              value={info.country}
+              onclick={handleInfoIconClick}
+            ></lightning-button-icon>
+          </td>
+          <td>
+            <lightning-formatted-number
+              value={info.cases}
+            ></lightning-formatted-number>
+          </td>
+          <td>
+            <lightning-formatted-number
+              value={info.deaths}
+            ></lightning-formatted-number>
+          </td>
+          <td>
+            <lightning-formatted-number
+              value={info.recovered}
+            ></lightning-formatted-number>
+          </td>
+        </tr>
+      </template>
+    </table>
+  </template>
+</template>
